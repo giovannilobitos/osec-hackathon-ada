@@ -1,0 +1,30 @@
+{
+  "name": "ada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend:install": "cd backend && npm install",
+    "client:install": "cd client && npm install",
+    "admin:install": "cd admin && npm install",
+    "backend": "cd backend && npm start",
+    "client": "cd client && npm start",
+    "admin": "cd admin && npm start",
+    "start": "concurrently \"npm run backend\" \"npm run client\" \"npm run admin\"",
+    "postinstall": "concurrently \"npm run backend:install\" \"npm run client:install\" \"npm run admin:install\"",
+    "stop": "kill -9 $(lsof -t -i:6060); kill -9 $(lsof -t -i:6061); kill -9 $(lsof -t -i:3030)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giovannilobitos/ada.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giovannilobitos/ada/issues"
+  },
+  "homepage": "https://github.com/giovannilobitos/ada#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

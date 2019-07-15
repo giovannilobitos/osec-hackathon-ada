@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 999
+  },
+  "authentication": {
+    "secret": "022f16095526387cc57b3be6101517c538429a82472e83be41e303a5c9515dcfe348b3e4d7b5b958bc219895be08ca8cd9291a26be2431a696ef7179a324408a7574bee3b69456345f7baf10142d1db024789c543a7ab0ca6c872ae6836d74af4f258360e652036922311624a27261a5d6eb313392a27b273f68e682f8dad2adc2499658e490424b9a084e722a7d174af79ba4fcae3ccc70f132874ebd0fddf02e15bb9d4aab906c0d7065af6426cd01fcecbfee12f54f428d7ea479048b61dbd0f8aa02ce5a947ccc6915ad670b9482a6e25ea76962a0e0e2c7fb07315344a9a6b0696ba7e4b172f521a665d31938c5a816fbcc76f9557f468898c07fe6956a",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "\\username",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/ada_local"
+}

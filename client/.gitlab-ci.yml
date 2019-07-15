@@ -1,0 +1,32 @@
+stages:
+  - push
+  - deploy
+
+push:
+  stage: push
+  only:
+    - dev
+    - prod
+  script:
+    - docker build -t "$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_REF_NAME" .
+    - docker push "$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_REF_NAME"
+
+deploy:docker.snapzio.com:
+  stage: deploy
+  environment: dev
+  only:
+    - dev
+  script:
+    - export SERVER="docker.snapzio.com"
+    - export PROJECTFOLDER="/home/dialer/dev"
+    - ssh $SERVER "cd $PROJECTFOLDER && npm run docker:dev"
+
+deploy:encaller.snapzio.com:
+  stage: deploy
+  environment: prod
+  only:
+    - prod
+  script:
+    - export SERVER="encaller.snapzio.com"
+    - export PROJECTFOLDER="/home/dialer/prod"
+    - ssh $SERVER "cd $PROJECTFOLDER && npm run docker:prod"

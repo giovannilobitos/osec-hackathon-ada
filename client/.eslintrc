@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true,
+  },
+  "extends": ["airbnb-base", "plugin:react/recommended"],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "import/extensions": 0,
+    "import/no-absolute-path": 0,
+    "react/prop-types": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": [2, { "ignore": ["^[/]"] }],
+    "func-names": 0,
+    "max-len": 0, # requires to limit no. of lines to 100 only.
+    "camelcase": 0, # require to name variable instead or _ ( site_id) to camelcase (siteId)
+    "class-methods-use-this": 0, # require to use `this` when defining a 'create' method.
+    "no-restricted-syntax": 0, # deal to you later
+    "consistent-return": 0, # required to have `return` statement for every function
+    "no-param-reassign": 0, # editing properties on params
+    "no-return-await": 0, # not allowed to return await expression
+    "default-case": 0, # expecting a default block on switch statement
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+    "no-useless-escape": 0,
+    "react/no-typos": 1,
+    "react/jsx-uses-react": "error",
+    "react/jsx-pascal-case": 1,
+    "react/sort-prop-types": 0,
+    "react/no-unused-state": 1,
+    "react/no-unused-prop-types": 1,
+    "no-mixed-spaces-and-tabs": 0
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+  },
+  "globals": {
+    "import": 0,
+    "System": 0,
+    "describe": 0, # consider describe as global, necessary for testing
+    "xdescribe": 0, # consider describe as global, necessary for testing
+    "describe.only": 0, # consider describe as global, necessary for testing
+    "it": 0, # consider describe as global, necessary for testing
+    "before": 0, # consider describe as global, necessary for testing
+    "after": 0, # consider describe as global, necessary for testing
+    "afterEach": 0, # consider describe as global, necessary for testing
+    "beforeEach": 0, # consider describe as global, necessary for testing
+    "xit": 0, # consider describe as global, necessary for testing
+    "it.only": 0, # consider describe as global, necessary for testing
+    "appClient": 0, # socket-client app instance for end to end testing.
+    "document": 0,
+    }
+}
