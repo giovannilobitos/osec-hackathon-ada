@@ -1,4 +1,4 @@
-## Abuse Detection App (ADA)
+## Abused Detection App (ADA)
 A system that allows authority to detect if a certain child has undergone abuse.
 
 The system is divided into two parts - the game itself and the admin.
