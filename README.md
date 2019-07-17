@@ -9,8 +9,8 @@ The admin contains real-time reports on the results of the children's game sessi
 
 
 
-### Technology
-- ##### Frontend
+## Technology
+##### Frontend
  - Webpack
  - React
  - AntDesign
@@ -19,7 +19,7 @@ The admin contains real-time reports on the results of the children's game sessi
  - Socket.io
  - PWA
 
-- #### Backend
+#### Backend
  - Node
  - Feathers Server
  - Express
@@ -28,7 +28,7 @@ The admin contains real-time reports on the results of the children's game sessi
 
 
 
-### Steps
+## Steps
 1. Clone this repo
 2. CD to the project folder
 3. Run the command `npm install`
@@ -36,7 +36,7 @@ The admin contains real-time reports on the results of the children's game sessi
 
 
 
-### Default Local Ports
+## Default Local Ports
 - backend: 3030
 - client: 6060
 - admin: 6061
